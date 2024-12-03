@@ -21,6 +21,21 @@ create table positions (
 );
 
 -- tabela przechowująca dane pracowników
+
+-- I znowu to samo, tabela klient i pracownik... moglbys z tego jedną tabele zrobić. 
+-- Na przykład person - i podać tutaj ustawic odpowiednio wszystko
+-- i do tego osobna tabele na umowe i w niej dajemy dane do umowy i stanowisko id
+-- jelsi ktos nie ma contract_id to znaczy ze jest klientem, inaczej to pracownik
+-- create table person (
+--     person_id int primary key auto_increment, -- unikalny identyfikator pracownika
+--     first_name varchar(25) not null,            -- imię klienta
+--     last_name varchar(50) not null,             -- nazwisko klienta
+--     phone_number varchar(15),                   -- numer telefonu
+--     email_address varchar(100) not null         -- adres e-mail
+--     contract_id varchar(20),                -- identyfikator umowy
+--     foreign key (contract_id) references contract (contract_id)
+-- );
+
 create table employees (
     employee_id int primary key auto_increment, -- unikalny identyfikator pracownika
     position_id int not null,                   -- identyfikator stanowiska
